@@ -3,9 +3,11 @@ This is a chrome extension to improve github user experience.
 
 # Features
 When you create a PR to https://github.com/dotnet/docfx (hardcoded):
+
 ![](resources/reviewers-before.png)
 
 This extension will load all the DocFX guys (yes, also hardcoded) to suggestions:
+
 ![](resources/reviewers-after.png)
 
 # Install
