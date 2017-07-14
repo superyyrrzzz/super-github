@@ -46,17 +46,25 @@ function addDefaultReviewerOfDocfx() {
         $(".sidebar-assignee .js-issue-sidebar-form span.css-truncate p span.css-truncate-target").text(function (index, text) {
             existedSuggestions.push(text.trim());
         });
+
         var currentUser = $('meta[name=user-login]').attr("content");
-        if (currentUser) {
-            existedSuggestions.push(currentUser);
+        var suggestions = [];
+        defaultReviewerInfos.forEach(function (info) {
+            if (existedSuggestions.indexOf(info.userName) == -1 && info.userName != currentUser) {
+                suggestions.push(info);
+            }
+        })
+
+        if ($(".sidebar-assignee .js-issue-sidebar-form span.css-truncate p.text-gray-light").text().trim() !== "Suggestions"
+            && suggestions.length > 0) {
+            $(".sidebar-assignee .js-issue-sidebar-form span.css-truncate")
+                .first()
+                .append("<p class=\"text-gray-light\">Suggestions</p>");
         }
 
-        defaultReviewerInfos.forEach(function (info) {
-            if (existedSuggestions.indexOf(info.userName) == -1) {
-                $(".sidebar-assignee .js-issue-sidebar-form span.css-truncate")
-                    .first()
-                    .append(generateSuggestionHtml(info.userName, info.userId));
-            }
+        suggestionsQuery = $(".sidebar-assignee .js-issue-sidebar-form span.css-truncate").first();
+        suggestions.forEach(function (info) {
+            suggestionsQuery = suggestionsQuery.append(generateSuggestionHtml(info.userName, info.userId));
         });
     }
 
