@@ -13,4 +13,4 @@ This extension will load all the DocFX guys (yes, also hardcoded) to suggestions
 # Install
 1. `git clone https://github.com/superyyrrzz/super-github.git`
 2. Drag the folder "super-github" into Chrome's extension page `chrome://extensions`
-3. Refresh the page.
+3. Create a pull request to https://github.com/dotnet/docfx! (need to refresh the page when first use)
