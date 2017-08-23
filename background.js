@@ -22,11 +22,7 @@ const defaultReviewerInfos = [
     {
         userName: "vwxyzh",
         userId: "2705828"
-    },
-    {
-        userName: "hechaochao",
-        userId: "10389980"
-    },
+    }
 ]
 
 $(".discussion-sidebar").on('DOMSubtreeModified', addDefaultReviewerOfDocfx);
