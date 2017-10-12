@@ -4,10 +4,6 @@ const defaultReviewerInfos = [
         userId: "17958546"
     },
     {
-        userName: "hellosnow",
-        userId: "1836885"
-    },
-    {
         userName: "herohua",
         userId: "2174068"
     },
