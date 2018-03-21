@@ -1,4 +1,6 @@
 # Super GitHub
+**Now this seems no use as [the feature](https://blog.github.com/2017-07-06-introducing-code-owners/?utm_content=buffer3e3ed&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) is already suppoted by GitHub by default.**
+
 This is a chrome extension to improve github user experience.
 
 # Features
